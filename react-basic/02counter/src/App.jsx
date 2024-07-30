@@ -14,7 +14,7 @@ function App() {
     setCounter(counter)
     //console.log(counter)
   }
-  const removeValue = ()=>{
+  const removeValue = () => {
     if(!(counter===0))
     counter--;
     
