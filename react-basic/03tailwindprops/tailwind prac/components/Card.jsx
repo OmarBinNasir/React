@@ -19,7 +19,7 @@ function Card({channel,buttonText}){ // destructuring of props
             debitis?
           </p>
           <button class="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-            {buttonText||"click na"}
+            {buttonText}
           </button>
         </div>
       </div>
