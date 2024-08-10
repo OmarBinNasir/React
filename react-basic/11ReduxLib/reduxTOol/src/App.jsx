@@ -1,12 +1,17 @@
 import { useState } from 'react'
+import AddTodo from './components/AddTodo'
+import Todo from './components/Todos'
 
 
 function App() {
  
 
   return (
-   <h1> learn redux toolkit </h1>
+    <>
+   <AddTodo />
+   <Todo />
+   </>
   )
 }
 
-export default App
+export default App 
