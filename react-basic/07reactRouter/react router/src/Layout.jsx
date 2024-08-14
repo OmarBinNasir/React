@@ -8,10 +8,7 @@ import { Outlet } from "react-router-dom"
         <>
             <Header />
             <Outlet />
-            <Footer />
-            
-           
-            
+            <Footer />   
         </>
     )
 }

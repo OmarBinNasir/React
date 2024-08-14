@@ -15,10 +15,10 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(()=>{
-    authService.getCurrentUser()
+    authService.getCurrentUser()                // the login or not will be fetched from backend
     .then((userData)=>{
       if(userData)
-       dispatch(login({ userData }))
+       dispatch(login({ userData }))            // reducer setting status to true and store has access to whole app
       else
         dispatch(logout())
     })
