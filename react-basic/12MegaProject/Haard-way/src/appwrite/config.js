@@ -85,7 +85,10 @@ export class Service {
             console.log("Appwrite service :: getPosts error", error);
         }
     }
+
+
     // upload files service
+
     async uploadFile(file){
         try {
           return await this.bucket.createFile(
@@ -109,7 +112,7 @@ export class Service {
             console.log("Appwrite service :: getPost error", error);
         }
     }
-    async previewView(fileId){
+    async getFilePreview(fileId){
         try{
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
