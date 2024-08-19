@@ -12,6 +12,15 @@ import RTE from "./RTE";
 import SignUp from "./SignUp"
 import PostForm from "./post-form/PostForm";
 import AuthLayout from "./AuthLayout"
-    
+import AddPost from "../pages/AddPost";
+import AllPosts from "../pages/AllPosts";
+import EditPost from "../pages/EditPost";
+import Home from "../pages/Home"; 
+import { Login as LoginPage } from "../pages/Login";
+import Post from "../pages/Post";
+import { SignUp as SignUpPage} from "../pages/SignUp"
+
 export { Header, Footer, Container, LogoutBtn, Logo, PostCard, Button, Input, Select, 
-    Login, RTE, SignUp, PostForm, AuthLayout } 
+    Login, RTE, SignUp, PostForm, 
+    Home,
+    AuthLayout, LoginPage, SignUpPage, Post, AddPost, AllPosts, EditPost  } 
