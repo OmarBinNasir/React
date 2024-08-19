@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import { useForm } from 'react-hook-form'
-import {Button, RTE, Input, Select} from "../components/index"
-import appwriteService from "../appwrite/config"
+import {Button, RTE, Input, Select} from "../index"
+import appwriteService from "../../appwrite/config"
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -46,10 +46,13 @@ function PostForm( {post} ) {
           ...data,
           userId: userData.id,
         })
+
+        if(dbPost){
+          navigate(`/post/${dbPost.$id}`)
+        }
       }
-      if(dbPost){
-        navigate(`/post/${dbPost.$id}`)
-      }
+      
+      
       
     }
 
