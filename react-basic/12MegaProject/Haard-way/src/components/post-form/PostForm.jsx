@@ -15,7 +15,8 @@ function PostForm( {post} ) {
   })
 
   const navigate = useNavigate()
-  const userData = useSelector( state => state.user.userData )
+  const userData = useSelector( state => state.auth.userData )
+
 
   const submit = async (data) => {
     if(post){
@@ -60,7 +61,7 @@ function PostForm( {post} ) {
 
   const slugTransform = useCallback((value)=>{
 
-    if( value && typeof(value) === 'sting' ){
+    if( value && typeof(value) === 'string' ){
       return value
       .trim()
       .toLowerCase()
@@ -103,13 +104,13 @@ function PostForm( {post} ) {
         <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
     </div>
     <div className="w-1/3 px-2">
-        <Input
-            label="Featured Image :"
-            type="file"
-            className="mb-4"
-            accept="image/png, image/jpg, image/jpeg, image/gif"
-            {...register("image", { required: !post })}
-        />
+             <Input
+                    label="Featured Image :"
+                    type="file"
+                    className="mb-4"
+                    accept="image/png, image/jpg, image/jpeg, image/gif"
+                    {...register("image", { required: !post })}
+                />
         {post && (
             <div className="w-full mb-4">
                 <img
@@ -125,7 +126,7 @@ function PostForm( {post} ) {
             className="mb-4"
             {...register("status", { required: true })}
         />
-        <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+        <Button type="submit" bgColor={post ? "bg-green-500" : "bg-pink-300"} className="w-full">
             {post ? "Update" : "Submit"}
         </Button>
      </div>

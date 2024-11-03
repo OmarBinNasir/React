@@ -1,14 +1,13 @@
 import React,  { useState, useEffect } from 'react'
 import appwriteService from '../appwrite/config'
 import { Container, PostCard } from '../components'
-import { useNavigate } from 'react-router-dom'
+
 
 function Home() {
-    const [posts, setPosts] = useState()
-    const navigate = useNavigate()
-
+    const [posts, setPosts] = useState([])
+    
     useEffect(()=>{
-        appwriteService.getPosts([]).then((posts)=>{
+        appwriteService.getPosts().then((posts)=>{
             posts && setPosts(posts.documents)
             
         })
