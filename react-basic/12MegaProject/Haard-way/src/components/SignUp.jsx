@@ -21,6 +21,7 @@ function Signup() {
                 const userData = await authService.getCurrentUser()
                 if(userData) 
                     dispatch(login(userData));
+                console.log(userData)
                 console.log("hitted signup")
                 navigate("/")
             }

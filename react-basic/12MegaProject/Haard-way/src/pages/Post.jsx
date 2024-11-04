@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link ,useNavigate, useParams } from 'react-router-dom'
 import appwriteService from '../appwrite/config'
 import { useSelector } from 'react-redux'
+import { Button, Container } from '../components'
+import parse from "html-react-parser"
 
 function Post() {
 
@@ -12,6 +14,15 @@ function Post() {
   const userData = useSelector((state)=>{
    return state.auth.userData
   })
+
+  const deletePost = () => {
+    appwriteService.deletePost(post.$id).then((status) => {
+        if (status) {
+            appwriteService.deleteFile(post.featuredImage);
+            navigate("/");
+        }
+    });
+};
 
   const isAuthor = post && userData ? post.userId === userData.$id : false
 
@@ -52,7 +63,7 @@ function Post() {
                 <h1 className="text-2xl font-bold">{post.title}</h1>
             </div>
             <div className="browser-css">
-                {parse(post.content)}
+                { parse(post.content) }
                 </div>
         </Container>
     </div>
