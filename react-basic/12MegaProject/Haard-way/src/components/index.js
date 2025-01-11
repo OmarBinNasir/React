@@ -9,18 +9,18 @@ import Input from "./Input"
 import Select from "./Select"
 import Login from "./Login";
 import RTE from "./RTE";
-import SignUp from "./SignUp"
+import Signup from "./SignUp"
 import PostForm from "./post-form/PostForm";
 import AuthLayout from "./AuthLayout"
 import AddPost from "../pages/AddPost";
 import AllPosts from "../pages/AllPosts";
 import EditPost from "../pages/EditPost";
 import Home from "../pages/Home"; 
-import { Login as LoginPage } from "../pages/Login";
+import LoginPage  from "../pages/Login"
 import Post from "../pages/Post";
-import { SignUp as SignUpPage} from "../pages/SignUp"
+import SignUpPage from "../pages/SignUp"
 
 export { Header, Footer, Container, LogoutBtn, Logo, PostCard, Button, Input, Select, 
-    Login, RTE, SignUp, PostForm, 
+    Login, RTE, Signup, PostForm, 
     Home,
     AuthLayout, LoginPage, SignUpPage, Post, AddPost, AllPosts, EditPost  } 

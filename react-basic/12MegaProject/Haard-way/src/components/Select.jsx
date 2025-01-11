@@ -1,11 +1,13 @@
 import React from 'react'
+import { useId } from 'react'
 
 function Select({
     label,
     className = "",
     options,
     ...props
-}) {
+},ref) {
+  const id = useId()
   return (
     <div className = "w-full">
     { label && <label htmlFor={id} className= "" > {label} </label>}

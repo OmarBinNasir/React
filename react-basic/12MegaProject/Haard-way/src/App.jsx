@@ -1,5 +1,5 @@
 import React,{ useState, useEffect } from 'react'
-import { authService } from './appwrite/Auth'
+import  authService  from './appwrite/Auth'
 import { login, logout} from "./store/authSlice"
 import { useDispatch } from "react-redux"
 import './App.css'
@@ -26,11 +26,12 @@ function App() {
   })
 
   return !loading ?
-   <div className=" min-h-screen flex flex-wrap content-between bg-gray-400">
-    <div className="">
+  
+   <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
+    <div className="w-full block">
         <Header />
         <main>
-      TODO:  { /* <Outlet /> */ }
+         <Outlet /> 
         </main>
        
         <Footer />
