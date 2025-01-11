@@ -71,9 +71,9 @@ function SignUp() {
                             label = "Password: "
                             type = "password"
                             placeHolder = "Enter your password"
-                            {...register("password"),{
+                            {...register("password",{
                                 required:true,
-                            }}
+                            })}
 
                         />
                     </div>
