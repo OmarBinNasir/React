@@ -19,63 +19,6 @@ import AllPosts from "./pages/AllPosts";
 
 const router = createBrowserRouter([
   {
-<<<<<<< HEAD
-    path : '/',
-    element : <App />,
-    children : [
-      { 
-        path : '/',
-        element : <Home />
-      },
-      {
-        path : '/login',
-        element : (
-          <AuthLayout authentication = { false }>
-            <LoginPage />
-          </AuthLayout> 
-        )
-      },
-      {
-        path : "/signup",
-        element : ( 
-          <AuthLayout authentication>
-            {" "}
-            <SignUpPage />
-          </AuthLayout> )
-      },
-      {
-        path: "/all-posts",
-        element: (
-            <AuthLayout authentication>
-                {" "}
-                <AllPosts />
-            </AuthLayout>
-        ),
-      },
-      {
-        path: "/add-post",
-        element: (
-            <AuthLayout authentication>
-                {" "}
-                <AddPost />
-            </AuthLayout>
-        ),
-      },
-      {
-        path : "/edit-post/:slug",
-        element :(
-          <AuthLayout authentication>
-            <EditPost />
-          </AuthLayout>
-        )
-    },
-    {
-      path:"/post/:slug",
-      element : <Post />
-    }
-    ]
-  }
-=======
     path: "/",
     element: <App />,
     children: [
@@ -132,7 +75,6 @@ const router = createBrowserRouter([
         },
     ],
 },
->>>>>>> 3e59670a7c5d05b72465e5b3dc94a9b651565014
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
