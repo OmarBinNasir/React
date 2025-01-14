@@ -11,10 +11,17 @@ function App() {
   const passwordRef = useRef(null) // this will keep eye on the input 
 
   const copyPasswordToClipboard = useCallback(()=>{
+<<<<<<< HEAD
     passwordRef.current?.select()  // to give blue select effect
     //passwordRef.current.setSelectionRange(0,3) // selection range 0-3 only first 3 characters
     window.navigator.clipboard.writeText(password)
   },[password]) // without using ref or useRef
+=======
+    passwordRef.current?.select()  // to give blue select effect on the place holder, useRef is required
+    passwordRef.current.setSelectionRange(0,3) // selection range 0-3 only first 3 characters
+    window.navigator.clipboard.writeText(password) // this copies the text to the clipboard this line could work without useRef
+  },[password]) 
+>>>>>>> 2ee2030a2bd5eaa1d2cbce94c7594847b0e4a610
 
   const passwordGenerator = useCallback(() => {
     let pass = ""
