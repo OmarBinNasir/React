@@ -49,38 +49,7 @@ function Signup() {
                         Sign In
                     </Link>
                 </p>
-<<<<<<< HEAD
-                { error && <p className="text-red-600 mt-8 text-center">{ error }</p>}
-                <form onSubmit = { handleSubmit( create ) }>
-                    <div className = "space-y-5 ">
-                    <Input 
-                        label = 'Full Name:'
-                        placecholder = "Enter your full name"
-                        {...register("name", {
-                            required:true
-                        })}
-                    />
-                    <Input label="Email:"
-                            placeholder = "enter your email"
-                            type = "email"
-                            {...register("email", {
-                                required:true,
-                                validate:{
-                                    matchPattern : (value) => /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/.test(value) ||
-                                    "email address must be valid email address",       // regular expression regEx checks if email is in correct format
-                                }
-                            }) }
-                        />
-                        <Input 
-                            label = "Password: "
-                            type = "password"
-                            placeHolder = "Enter your password"
-                            {...register("password",{
-                                required:true,
-                            })}
-=======
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
->>>>>>> 3e59670a7c5d05b72465e5b3dc94a9b651565014
 
                 <form onSubmit={handleSubmit(create)}>
                     <div className='space-y-5'>

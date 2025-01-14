@@ -51,40 +51,6 @@ function Login() {
                     >
                         Sign Up
                     </Link>
-<<<<<<< HEAD
-                </p>
-                { error && <p className="text-red-600 mt-8 text-center">{ error }</p>}
-
-                <form onSubmit = { handleSubmit( login )} className='mt-8' >
-                    <div className='space-y-5'>
-                        <Input label="Email:"
-                            placeholder = "enter your email"
-                            type = "email"
-                            {...register("email", {
-                                required:true,
-                                validate:{
-                                    matchPattern : (value) => /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/.test(value) ||
-                                    "email address must be valid email address",       // regular expression regEx checks if email is in correct format
-                                }
-                            }) }
-                        />
-                        <Input 
-                            label = "Password: "
-                            type = "password"
-                            placeHolder = "Enter your password"
-                            { ...register("password",{
-                                required:true,
-                            })}
-
-                        />
-                        <Button children = "Sign In"
-                            type = "submit"
-                            className='w-full'
-                        />
-                    </div>
-                </form>
-
-=======
         </p>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
         <form onSubmit={handleSubmit(login)} className='mt-8'>
@@ -115,7 +81,6 @@ function Login() {
                 >Sign in</Button>
             </div>
         </form>
->>>>>>> 3e59670a7c5d05b72465e5b3dc94a9b651565014
         </div>
     </div>
   )
