@@ -12,7 +12,7 @@ function App() {
 
   const copyPasswordToClipboard = useCallback(()=>{
     passwordRef.current?.select()  // to give blue select effect
-    passwordRef.current.setSelectionRange(0,3) // selection range 0-3 only first 3 characters
+    //passwordRef.current.setSelectionRange(0,3) // selection range 0-3 only first 3 characters
     window.navigator.clipboard.writeText(password)
   },[password]) // without using ref or useRef
 

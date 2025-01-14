@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Logo({ width = "100px"}) {
+function Logo() {
   return (
-    <div className=" w-20">
-    <img src = "../../images.jpeg"/>
+    <div className=" w-20 rounded-lg">
+    <img src = "../../panda.png" className="w-fit bg-transparent" />
     </div>
   )
 }
